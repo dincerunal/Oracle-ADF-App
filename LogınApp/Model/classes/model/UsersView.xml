@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UsersView"
+  Version="11.1.2.64.36"
+  SelectList="Users.USERNAME, 
+       Users.PASSWORD, 
+       Users.MAILADDRESS, 
+       Users.USERID"
+  FromList="USERS Users"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <EntityUsage
+    Name="Users"
+    Entity="model.Users"/>
+  <ViewAttribute
+    Name="Username"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Username"
+    EntityUsage="Users"
+    AliasName="USERNAME"/>
+  <ViewAttribute
+    Name="Password"
+    PrecisionRule="true"
+    EntityAttrName="Password"
+    EntityUsage="Users"
+    AliasName="PASSWORD"/>
+  <ViewAttribute
+    Name="Mailaddress"
+    PrecisionRule="true"
+    EntityAttrName="Mailaddress"
+    EntityUsage="Users"
+    AliasName="MAILADDRESS"/>
+  <ViewAttribute
+    Name="Userid"
+    PrecisionRule="true"
+    EntityAttrName="Userid"
+    EntityUsage="Users"
+    AliasName="USERID"/>
+</ViewObject>

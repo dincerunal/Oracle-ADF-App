@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="untitled1.jspx" id="d1" binding="#{backingBeanScope.login.d1}">
+            <af:form id="f1" binding="#{backingBeanScope.login.f1}">
+                <af:panelStretchLayout id="psl1" binding="#{backingBeanScope.login.psl1}">
+                    <f:facet name="center">
+                        <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.login.pfl1}" labelAlignment="start">
+                            <f:facet name="footer"/>
+                            <af:inputText label="username" id="it1" binding="#{backingBeanScope.login.it1}"
+                                          value="#{backingBeanScope.login.userName}"/>
+                            <af:inputText label="pasword" id="it2" binding="#{backingBeanScope.login.it2}"
+                                          secret="true" inlineStyle="text-align:left;"
+                                          value="#{backingBeanScope.login.pasword}"/>
+                            <af:outputText value="#{backingBeanScope.login.loginmsj}" id="ot1" binding="#{backingBeanScope.login.ot1}"/>
+                            <af:commandButton text="log in" id="cb1" binding="#{backingBeanScope.login.cb1}"
+                                              action="#{backingBeanScope.login.login_action}"/>
+                        </af:panelFormLayout>
+                        <!-- id="af_one_column_stretched"   -->
+                    </f:facet>
+                </af:panelStretchLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:login-->
+</jsp:root>
